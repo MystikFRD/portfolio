@@ -1,5 +1,5 @@
 body {
-    min-height: 100vh;
+    min-height: 100%;
     margin: 0;
     padding: 0;
     background: #162128; /* fallback */
@@ -168,7 +168,7 @@ body {
         padding-top: 2rem;
     }
     .img-profile {
-        width: 90vw;
+        width: 90%;
         max-width: 320px;
         height: auto ;
         margin-top: 1.5rem;
@@ -201,7 +201,7 @@ body {
     display: inline-block;
     vertical-align: middle;
     margin-left: 1rem;
-    width: 2000px;
+    width: 90%;
     height: 1px;
     background: #9EEFE5;
     opacity: 0.4;
