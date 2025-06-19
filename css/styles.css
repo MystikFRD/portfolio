@@ -478,9 +478,6 @@ body {
         margin-top: 2vw;
     }
 
-
-    }
-
     /* Decorative heading lines (responsive) */
     .top-label::after,
     .about-heading::after,
@@ -509,7 +506,7 @@ body {
         margin-top: 4vw;
         margin-left: 0;
     }
-
+}
 
 /* LARGE DESKTOP STYLES (950px+) */
 @media (min-width: 950px) {
