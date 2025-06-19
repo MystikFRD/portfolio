@@ -2,11 +2,10 @@ version: '3.8'
 
 services:
   web:
-    image: nginx:alpine
+    build:
+      context: .
+      dockerfile: Dockerfile
     container_name: mystik-portfolio
-    volumes:
-      - ./site:/usr/share/nginx/html:ro
-      - ./nginx.conf:/etc/nginx/nginx.conf:ro # Optional, nur falls du eine eigene nginx.conf willst
     ports:
       - "8090:80"
     restart: unless-stopped
