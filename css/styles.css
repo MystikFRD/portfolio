@@ -1,8 +1,9 @@
+/* === Global styles and main background === */
 body {
     min-height: 100%;
     margin: 0;
     padding: 0;
-    background: #162128; /* fallback */
+    background: #162128; /* fallback color */
     background: radial-gradient(
             ellipse 90% 70% at 0% 30%,
             #2F4858 0%,
@@ -12,35 +13,40 @@ body {
     font-family: 'JetBrains Mono', monospace;
     color: #fff;
 }
-/* makes every section move symetrically when zooming out*/
+
+/* Main content wrapper, controls column stacking */
 .page-wrapper {
     display: flex;
     flex-direction: column;
 }
+
+/* Mobile layout for sections */
 @media (max-width: 900px) {
     .page-wrapper {
         flex-direction: column;
     }
 }
-/* affects everything within the <section> area within index.html*/
+
+/* === HERO SECTION === */
+/* Controls top padding and left/right alignment on large screens */
 .hero-section {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     text-align: left;
-    padding-left: 4rem;
+    padding-left: 4rem;    /* Increase/decrease section side padding here */
     padding-right: 1rem;
     padding-top: 8rem;
-
 }
 
 .top-label {
-    color: #ffffff;
+    color: #fff;
     font-size: 2em;
     margin-bottom: 1rem;
     font-family: 'JetBrains Mono', monospace;
 }
+/* Decorative line after section label */
 .top-label::after {
     content: "";
     display: inline-block;
@@ -52,40 +58,41 @@ body {
     opacity: 0.4;
     border-radius: 2px;
 }
+
 .hero-section h1 {
-    font-size: 2.25rem; /* text-4xl */
+    font-size: 2.25rem;   /* Heading size for mobile/desktop */
     font-weight: bold;
     line-height: 1.2;
     margin: 0;
-    color: #fff; /* ensure h1 is white! */
+    color: #fff;
     font-family: 'JetBrains Mono', monospace;
 }
+
+/* Larger h1 on wider screens */
 @media (min-width: 768px) {
     .hero-section h1 {
-        font-size: 3.75rem; /* md:text-6xl */
+        font-size: 3.75rem;
     }
 }
 
-.highlight-teal {
-    color: #2dd4bf; /* teal-400 */
-}
-.highlight-cyan {
-    color: #22d3ee; /* cyan-400 */
-}
+/* Accent colors for highlights, reuse for other accents */
+.highlight-teal { color: #2dd4bf; }
+.highlight-cyan { color: #22d3ee; }
 
 .subheading {
     margin-top: 1rem;
-    color: #94a3b8; /* slate-400 */
-    max-width: 28rem;
+    color: #94a3b8;
+    max-width: 28rem;         /* Controls width of hero subtext */
     font-family: 'JetBrains Mono', monospace;
     font-size: 1.5rem;
 }
 
+/* Contact button style and hover (edit colors here if you want to re-theme) */
 .contact-btn {
     margin-top: 1.5rem;
     display: inline-block;
-    border: 1px solid #14b8a6; /* teal-500 */
-    color: #2dd4bf; /* teal-400 */
+    border: 1px solid #14b8a6;
+    color: #2dd4bf;
     padding: 0.5rem 1.5rem;
     border-radius: 0.5rem;
     text-decoration: none;
@@ -96,9 +103,10 @@ body {
 }
 .contact-btn:hover {
     background: #14b8a6;
-    color: #111827; /* black, for contrast */
+    color: #111827;
 }
 
+/* Hero section decorative line at bottom */
 .hero-section::after {
     content: "";
     display: inline-block;
@@ -110,6 +118,8 @@ body {
     border-radius: 2px;
     margin-top: 2.5rem;
 }
+
+/* === ABOUT SECTION === */
 .about-section{
     display: flex;
     flex-direction: column;
@@ -121,11 +131,12 @@ body {
     padding-top: 8rem;
 }
 .about-heading {
-    color: #ffffff;
+    color: #fff;
     font-size: 2em;
     margin-bottom: 1rem;
     font-family: 'JetBrains Mono', monospace;
 }
+/* Decorative line for about heading */
 .about-heading::after {
     content: "";
     display: inline-block;
@@ -136,16 +147,15 @@ body {
     background: #9EEFE5;
     opacity: 0.4;
     border-radius: 2px;
-
 }
 .about-row{
     display: flex;
     align-items: flex-start;
-    gap: 2rem;
+    gap: 2rem;          /* Spacing between image and text */
 }
 .about-text {
     margin-top: 1rem;
-    color: #94a3b8; /* slate-400 */
+    color: #94a3b8;
     max-width: 50rem;
     font-family: 'JetBrains Mono', monospace;
     font-size: 1.5rem;
@@ -153,13 +163,13 @@ body {
 .img-profile {
     width: 500px;
     height: 700px;
-    border-radius: 5%;
-
+    border-radius: 5%;  /* For soft image corners */
 }
+
+/* --- Responsive layout tweaks for About section --- */
 @media (max-width: 900px) {
     .about-row {
-        display: flex;
-        flex-direction: column; /* force column on mobile */
+        flex-direction: column;  /* Stack image and text on mobile */
         align-items: center;
     }
     .about-section {
@@ -170,16 +180,17 @@ body {
     .img-profile {
         width: 90%;
         max-width: 320px;
-        height: auto ;
+        height: auto;
         margin-top: 1.5rem;
         margin-left: 1rem;
     }
     .about-text {
         max-width: 100vw;
         font-size: 1rem;
-
     }
 }
+
+/* === SKILLS SECTION === */
 .skills-section {
     display: flex;
     flex-direction: column;
@@ -191,58 +202,54 @@ body {
     padding-top: 8rem;
 }
 .skills-heading {
-    color: #ffffff;
+    color: #fff;
     font-size: 2em;
     margin-bottom: 1rem;
     font-family: 'JetBrains Mono', monospace;
 }
+/* Decorative line, adjust width for heading underline */
 .skills-heading::after {
     content: "";
     display: inline-block;
     vertical-align: middle;
     margin-left: 1rem;
-    width: 90%;
+    width: 325%;
     height: 1px;
     background: #9EEFE5;
     opacity: 0.4;
     border-radius: 2px;
-
 }
-/* i got the following from https://codepen.io/thebabydino/pen/XJrYqGb a scrollable gallery, but is edited with gpt because it breaks my previous code*/
 
+/* === GALLERY/IMAGE SECTIONS === */
+/* Reset box model globally */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-body {
-    font-family: Raleway;
-    background-color: #202125;
-}
-
+/* Heading for gallery (edit only if you add more gallery sections) */
 .heading {
     text-align: center;
-    font-size: 2.0em;
+    font-size: 2em;
     letter-spacing: 1px;
     padding: 40px;
     color: white;
 }
 
+/* --- Image Gallery Styles --- */
 .gallery-image {
     padding: 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
-
 .gallery-image img {
     height: 250px;
     width: 350px;
     transform: scale(1.0);
     transition: transform 0.4s ease;
 }
-
 .img-box {
     box-sizing: content-box;
     margin: 10px;
@@ -252,9 +259,9 @@ body {
     display: inline-block;
     color: white;
     position: relative;
-    background-color: white;
+    background-color: white; /* <- If you want a different gallery bg, edit here */
 }
-
+/* Caption and hover overlay styling for gallery images */
 .caption {
     position: absolute;
     bottom: 5px;
@@ -262,7 +269,6 @@ body {
     opacity: 0.0;
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
-
 .transparent-box {
     height: 250px;
     width: 350px;
@@ -272,28 +278,226 @@ body {
     left: 0;
     transition: background-color 0.3s ease;
 }
-
-.img-box:hover img {
-    transform: scale(1.1);
-}
-
-.img-box:hover .transparent-box {
-    background-color:rgba(0, 0, 0, 0.5);
-}
-
+.img-box:hover img { transform: scale(1.1); }
+.img-box:hover .transparent-box { background-color:rgba(0, 0, 0, 0.5);}
 .img-box:hover .caption {
     transform: translateY(-20px);
     opacity: 1.0;
 }
+.img-box:hover { cursor: pointer; }
+.caption > p:nth-child(2) { font-size: 0.8em; }
+.opacity-low { opacity: 0.5; }
 
-.img-box:hover {
-    cursor: pointer;
+/* === TRAVEL GALLERY SECTION === */
+.travel-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+    padding-left: 4rem;
+    padding-right: 1rem;
+    padding-top: 8rem;
+}
+/* Heading and decorative underline */
+.travel-heading {
+    color: #fff;
+    font-size: 2em;
+    margin-bottom: 1rem;
+    font-family: 'JetBrains Mono', monospace;
+}
+.travel-heading::after {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 1rem;
+    width: 850%;
+    height: 1px;
+    background: #9EEFE5;
+    opacity: 0.4;
+    border-radius: 2px;
 }
 
-.caption > p:nth-child(2) {
-    font-size: 0.8em;
+/* Gallery layout, wrapper, and animation keyframes */
+.travel-section .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    overflow: hidden;
+    max-width: 1300px;
+    margin: auto;
+}
+.travel-section .gallery__strip__wrapper {
+    flex: 0 0 100%;
+    justify-content: flex-end;
+    background: #222;
+    border-right: 2px solid #333;
+    position: relative;
 }
 
-.opacity-low {
+/* Responsive: split strips into columns on wider screens */
+@media (min-width: 500px) {
+    .travel-section .gallery__strip__wrapper {
+        flex: 0 0 50%;
+    }
+}
+@media (min-width: 950px) {
+    .travel-section .gallery {
+        height: 100vh;
+    }
+    /* Different gallery strip animations - edit timings for speed */
+    .travel-section .gallery__strip.one {
+        animation: 60s move-it ease alternate infinite 5s;
+        transform: translateY(2%);
+    }
+    .travel-section .gallery__strip.three {
+        animation: 70s move-it ease alternate infinite 6s;
+        transform: translateY(2%);
+    }
+    .travel-section .gallery__strip.two {
+        animation: 58s move-it-2 ease alternate infinite 5s;
+        transform: translateY(-50%);
+    }
+    .travel-section .gallery__strip.four {
+        animation: 65s move-it-2 ease alternate infinite 5.5s;
+        transform: translateY(-50%);
+    }
+    .travel-section .gallery__strip:hover { animation-play-state: paused; }
+    .travel-section .gallery__strip__wrapper {
+        flex: 0 0 25%;
+    }
+}
+
+/* Photo/card styles inside gallery */
+.travel-section .photo {
+    position: relative;
+    text-align: right;
+    padding-bottom: 3rem;
+}
+.travel-section .photo__image img {
+    width: 90%;
+    transform: translateX(30%);
+    transition: 1s cubic-bezier(0.19, 1, 0.22, 1) 0.2s;
+}
+.travel-section .photo__name {
+    text-transform: uppercase;
+    font-size: 40px;
+    font-family: 'JetBrains Mono', monospace;
+    letter-spacing: 2px;
+    color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+    margin-top: -25px;
+    transition: 0.4s ease-in-out 0.4s;
+    position: relative;
+    width: 100%;
+}
+.travel-section .photo__label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-size: 1rem;
+    font-family: 'JetBrains Mono', monospace;
+}
+/* Hover animation for photos in travel section */
+.travel-section .photo:hover .photo__image img {
+    transform: translateX(0%);
     opacity: 0.5;
+}
+.travel-section .photo:hover .photo__name { color: #fff; }
+.travel-section .photo:hover .photo__label { opacity: 1; }
+
+/* Gallery strip movement animations - change duration for speed */
+@keyframes move-it {
+    0%, 90%, 100% { transform: translateY(2%); }
+    45% { transform: translateY(-50%); }
+}
+@keyframes move-it-2 {
+    0%, 90%, 100% { transform: translateY(-50%); }
+    45% { transform: translateY(5%); }
+}
+
+/* === FOOTER SECTION === */
+/* For layout, background, and links in footer */
+.footer {
+    background: #1F2D36;           /* Change footer background here */
+    border-top: 1px solid #2F4858; /* Divider line */
+    color: #94a3b8;                /* Default text color */
+    font-family: 'JetBrains Mono', monospace;
+    margin-top: 4rem;              /* Space before footer */
+    padding: 2rem 0 1rem 0;
+}
+
+.footer-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.footer-main {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.footer-title {
+    color: #fff;                /* Name in footer */
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-right: 0.7em;
+}
+.footer-alias {
+    color: #2dd4bf;             /* Alias/accent color */
+    font-weight: bold;
+    margin-right: 1em;
+}
+.footer-location {
+    font-size: 0.95em;
+    color: #64748b;
+    margin-left: 0.2em;
+}
+.footer-links {
+    display: flex;
+    gap: 1.4em;                 /* Space between links */
+    margin-top: 0.3em;
+}
+.footer-link {
+    color: #2dd4bf;             /* Link color */
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.2s;
+}
+.footer-link:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+.footer-bottom {
+    text-align: center;
+    font-size: 0.88em;
+    color: #64748b;
+    margin-top: 1.7rem;
+    letter-spacing: 0.04em;
+}
+
+/* Responsive tweaks for smaller screens */
+@media (max-width: 600px) {
+    .footer-main {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.7rem;
+    }
+    .footer-wrapper { padding: 0 1rem; }
+    .footer-links {
+        flex-direction: column;
+        gap: 0.6em;
+        margin-top: 0.8em;
+    }
 }

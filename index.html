@@ -7,55 +7,58 @@
 </head>
 <body>
 <div class="page-wrapper">
+    <!-- === HERO / LANDING SECTION === -->
     <section class="hero-section">
         <p class="top-label">/terminal</p>
-
         <h1>
             Hello there!<br />
             I am <span class="highlight-teal">Mustafa</span><br />
             some call me <span class="highlight-cyan">Mystik.</span>
         </h1>
-
         <p class="subheading">
             I’m an aspiring Software-Developer with interests in Web-Development, AI, Graphic Design and more!
         </p>
-
-        <a href="#contact" class="contact-btn">
+        <a href="mailto:mustafa.bewerbungen@mubu.dev" class="contact-btn">
             Contact me →
         </a>
     </section>
 
+    <!-- === ABOUT SECTION === -->
     <section class="about-section">
         <h2 class="about-heading">/about me</h2>
         <div class="about-row">
             <div class="about-text">
-            <p>
-                Hi, I’m Mustafa Budak — a computer science student with a hands-on background in electronics and a growing passion for web development and self-hosted technologies.
-            </p>
-            <p>
-                I started my career as an automation technician at Ford, where I developed a deep understanding of systems, logic, and structured problem-solving.
-                That mindset now drives me in the world of programming, where I’m actively learning Python and JS, working with modern web tools like Tailwind and React,
-                and exploring the power of Linux, Docker, and self-hosted applications.
-            </p>
-            <p>
-                When I’m not coding or studying, you’ll probably find me tweaking my home server stack, learning how systems talk to each other, or just at work ^^
-            </p>
-            <p>
-                This portfolio is not just a showcase — it’s part of my learning journey. Let’s build something cool.
-            </p>
-        </div>
-        <img class="img-profile" src="assets/profile-picture.jpg" alt="-.-">
+                <p>
+                    Hi, I’m Mustafa Budak — a computer science student with a hands-on background in electronics and a growing passion for web development and self-hosted technologies.
+                </p>
+                <p>
+                    I started my career as an automation technician at Ford, where I developed a deep understanding of systems, logic, and structured problem-solving.
+                    That mindset now drives me in the world of programming, where I’m actively learning Python and JS, working with modern web tools like Tailwind and React,
+                    and exploring the power of Linux, Docker, and self-hosted applications.
+                </p>
+                <p>
+                    When I’m not coding or studying, you’ll probably find me tweaking my home server stack, learning how systems talk to each other, or just at work ^^
+                </p>
+                <p>
+                    This portfolio is not just a showcase — it’s part of my learning journey. Let’s build something cool.
+                </p>
+            </div>
+            <!-- Update this img if you want a different profile picture -->
+            <img class="img-profile" src="assets/profile-picture.jpg" alt="-.-">
         </div>
     </section>
+
+    <!-- === PROJECTS / SKILLS / IDEAS GALLERY === -->
     <section class="skills-section">
         <h2 class="skills-heading">/projects and ideas</h2>
         <div class="gallery-image">
+            <!-- Each img-box = one project thumbnail, edit/add/remove as needed -->
             <div class="img-box">
-                <img src="https://picsum.photos/350/250?image=444" alt="" />
+                <img src="assets/DevDeskConcept.png" alt="" />
                 <div class="transparent-box">
                     <div class="caption">
-                        <p>Library</p>
-                        <p class="opacity-low">Architect Design</p>
+                        <p>DevDesk</p>
+                        <p class="opacity-low">Retro Desktop</p>
                     </div>
                 </div>
             </div>
@@ -63,8 +66,8 @@
                 <img src="https://picsum.photos/350/250/?image=232" alt="" />
                 <div class="transparent-box">
                     <div class="caption">
-                        <p>Night Sky</p>
-                        <p class="opacity-low">Cinematic</p>
+                        <p>CodeBuddy</p>
+                        <p class="opacity-low">Algorithm & Code Playground</p>
                     </div>
                 </div>
             </div>
@@ -72,8 +75,8 @@
                 <img src="https://picsum.photos/350/250/?image=431" alt="" />
                 <div class="transparent-box">
                     <div class="caption">
-                        <p>Tea Talk</p>
-                        <p class="opacity-low">Composite</p>
+                        <p>Snippad</p>
+                        <p class="opacity-low">Personal Snippet Manager</p>
                     </div>
                 </div>
             </div>
@@ -81,35 +84,150 @@
                 <img src="https://picsum.photos/350/250?image=474" alt="" />
                 <div class="transparent-box">
                     <div class="caption">
-                        <p>Road</p>
-                        <p class="opacity-low">Landscape</p>
-                    </div>
-                </div>
-            </div>
-            <div class="img-box">
-                <img src="https://picsum.photos/350/250?image=344" alt="" />
-                <div class="transparent-box">
-                    <div class="caption">
-                        <p>Sea</p>
-                        <p class="opacity-low">Cityscape</p>
-                    </div>
-                </div>
-            </div>
-            <div class="img-box">
-                <img src="https://picsum.photos/350/250?image=494" alt="" />
-                <div class="transparent-box">
-                    <div class="caption">
-                        <p>Vintage</p>
-                        <p class="opacity-low">Cinematic</p>
+                        <p>TaskHeatmap</p>
+                        <p class="opacity-low">Visual Time Tracker</p>
                     </div>
                 </div>
             </div>
         </div>
-
-
-
     </section>
-</div>
 
+    <!-- === TRAVEL GALLERY SECTION === -->
+    <section class="travel-section">
+        <h2 class="travel-heading">/travel</h2>
+        <div class="travel-gallery">
+            <div class="gallery">
+                <!-- Each gallery__strip__wrapper holds a vertical "strip" of photos -->
+                <!-- Add or remove .gallery__strip__wrapper blocks to change number of strips -->
+                <div class="gallery__strip__wrapper">
+                    <div class="gallery__strip one">
+                        <!-- Each .photo = 1 travel location -->
+                        <div class="photo">
+                            <div class="photo__image">
+                                <img src="assets/Kyoto.jpg" alt="Kyoto">
+                            </div>
+                            <div class="photo__label">I want to go there in the future</div>
+                            <div class="photo__name">Kyoto</div>
+                        </div>
+                        <div class="photo">
+                            <div class="photo__image">
+                             <a href="https://photos.mubu.dev/share/ASipjItUNYEd8AIgJ0bvqrt9ougpvRz8qO77zlSSekbwdXDKiBf2-pH4ESw2S0bv3gM" target="_blank" rel="noopener noreferrer">
+                                 <img src="assets/Seoul.HEIC" alt="Seoul">
+                             </a>
+                            </div>
+                            <div class="photo__label">02.2025</div>
+                            <div class="photo__name">Seoul</div>
+                        </div>
+                        <div class="photo">
+                            <div class="photo__image">
+                                <img src="assets/HongKong.jpg" alt="Hong Kong">
+                            </div>
+                            <div class="photo__label">10.2025</div>
+                            <div class="photo__name">Hong Kong</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ... (three more gallery__strip__wrapper blocks follow, each their own set of .photo) ... -->
+                <div class="gallery__strip__wrapper">
+                    <div class="gallery__strip two">
+                        <div class="photo">
+                            <div class="photo__image">
+                                <img src="assets/Oman.avif" alt="Oman">
+                            </div>
+                            <div class="photo__label">Planning in the Future</div>
+                            <div class="photo__name">Oman</div>
+                        </div>
+                        <div class="photo">
+                            <div class="photo__image">
+                                <img src="assets/Mecca.jpg" alt="Mecca">
+                            </div>
+                            <div class="photo__label">Atleast once in my life</div>
+                            <div class="photo__name">Mecca</div>
+                        </div>
+                        <div class="photo">
+                            <div class="photo__image">
+                                <img src="assets/Istanbul.jpg" alt="Istanbul">
+                            </div>
+                            <div class="photo__label">Went there in the Past but I have to again</div>
+                            <div class="photo__name">Istanbul</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery__strip__wrapper">
+                    <div class="gallery__strip three">
+                        <div class="photo">
+                            <div class="photo__image">
+                                <img src="assets/Beijing.jpg" alt="Beijing">
+                            </div>
+                            <div class="photo__label">Next Year Hopefully</div>
+                            <div class="photo__name">Beijing</div>
+                        </div>
+                        <div class="photo">
+                            <div class="photo__image">
+                                <img src="assets/Shanghai.webp" alt="Shanghai">
+                            </div>
+                            <div class="photo__label">Next Year Hopefully</div>
+                            <div class="photo__name">Shanghai</div>
+                        </div>
+                        <div class="photo">
+                            <div class="photo__image">
+                                <img src="assets/Chongqing.jpeg" alt="Chongqing">
+                            </div>
+                            <div class="photo__label">Next Year Hopefully</div>
+                            <div class="photo__name">Chongqing</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery__strip__wrapper">
+                    <div class="gallery__strip four">
+                        <div class="photo">
+                            <div class="photo__image">
+                                <img src="assets/Taipei.jpg" alt="Taipei">
+                            </div>
+                            <div class="photo__label">In the Future</div>
+                            <div class="photo__name">Taipei</div>
+                        </div>
+                        <div class="photo">
+                            <div class="photo__image">
+                                <img src="assets/Singapore.jpg" alt="Singapore">
+                            </div>
+                            <div class="photo__label">In the Future</div>
+                            <div class="photo__name">Singapore</div>
+                        </div>
+                        <div class="photo">
+                            <div class="photo__image">
+                                <img src="assets/NYC.avif" alt="NYC">
+                            </div>
+                            <div class="photo__label">The only City in the US I want to Visit</div>
+                            <div class="photo__name">NYC</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- === FOOTER (update links/info as needed) === -->
+    <footer class="footer">
+        <div class="footer-wrapper">
+            <div class="footer-main">
+                <div>
+                    <span class="footer-title">Mustafa Budak</span>
+                    <span class="footer-alias">// Mystik</span>
+                    <span class="footer-location">Cologne, Germany</span>
+                </div>
+                <div class="footer-links">
+                    <!-- Change your@email.com to your actual email if you want it visible -->
+                    <a href="mailto:mustafa.bewerbungen@mubu.dev" class="footer-link">Contact</a>
+                    <a href="https://github.com/MystikFRD" class="footer-link" target="_blank" rel="noopener">GitHub</a>
+                    <a href="https://mubu.dev" class="footer-link" target="_blank" rel="noopener">mubu.dev</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2025 Mustafa Budak. All rights reserved.</span>
+            </div>
+        </div>
+    </footer>
+</div>
 </body>
 </html>
