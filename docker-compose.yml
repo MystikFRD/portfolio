@@ -1,12 +1,8 @@
-version: '3.8'
-
 services:
   web:
-    image: nginx:alpine
-    container_name: mystik-portfolio
-    volumes:
-      - ./site:/usr/share/nginx/html:ro
-      - ./nginx.conf:/etc/nginx/nginx.conf:ro # Optional, nur falls du eine eigene nginx.conf willst
+    image: httpd:alpine
+    container_name: my-static-site
     ports:
-      - "8090:80"
-    restart: unless-stopped
+      - "8999:80"
+    volumes:
+      - ./:/usr/local/apache2/htdocs/
